@@ -1,0 +1,13 @@
+public class PayPalAdapter implements IPaymentProcessor {
+    private PayPalPayment payPalPayment;
+
+    public PayPalAdapter(PayPalPayment payPalPayment) {
+        this.payPalPayment = payPalPayment;
+    }
+
+    @Override
+    public void processPayment(double amount) {
+        String email = "user@example.com";
+        payPalPayment.makePayment(email, amount); 
+    }
+}
