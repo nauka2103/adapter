@@ -1,0 +1,5 @@
+public class PayPalPayment {
+    public void makePayment(String email, double amount) {
+        System.out.println("Payment of $" + amount + " processed via PayPal for " + email);
+    }
+}
