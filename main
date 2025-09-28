@@ -1,0 +1,9 @@
+public class Main {
+    public static void main(String[] args) {
+        PayPalPayment payPalPayment = new PayPalPayment();
+
+        IPaymentProcessor paymentProcessor = new PayPalAdapter(payPalPayment);
+
+        paymentProcessor.processPayment(100.0);  
+    }
+}
